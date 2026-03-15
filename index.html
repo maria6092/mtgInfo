@@ -511,7 +511,7 @@
       <a href="#coleccion" class="navbtn">Colección</a>
       <a href="#mazos"     class="navbtn">Mazos</a>
       <a href="#finanzas"  class="navbtn">Finanzas</a>
-      <a href="#contacto"  class="navbtn primary" id="navContact">Contactar</a>
+      <a href="mailto:mtgmanagementbuisness@gmail.com" class="navbtn primary">mtgmanagementbuisness@gmail.com</a>
     </nav>
   </div>
 </header>
@@ -524,8 +524,7 @@
       <h1>Tu colección,<br/><span>perfectamente organizada</span></h1>
       <p class="hero-desc">MTG Manager centraliza tu inventario, mazos, lista de deseos y control de inversión en una sola aplicación web. Local, sin dependencias de terceros, lista para usar.</p>
       <div class="hero-actions">
-        <a href="index.html" class="btn">Abrir la aplicación</a>
-        <a href="#features"  class="btn ghost" id="heroFeat">Ver funciones</a>
+        <a href="#features"  class="btn" id="heroFeat">Ver funciones</a>
         <a href="https://ko-fi.com/mrsria" target="_blank" rel="noopener" class="btn ghost" style="display:inline-flex;align-items:center;gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Ko-fi</a>
       </div>
       <div class="pillRow" style="margin-top:24px">
@@ -901,10 +900,9 @@
   <div class="reveal">
     <div><span class="author-pill"><span class="author-av">MR</span>Desarrollado por María Raposo Sánchez</span></div>
     <h2 style="margin-top:18px">¿Te interesa MTG Manager?<br/><span>Hablemos</span></h2>
-    <p>Disponible para colaboraciones, adaptaciones o integración de nuevas funcionalidades. Escríbeme o abre la aplicación directamente.</p>
+    <p>Disponible para colaboraciones, adaptaciones o integración de nuevas funcionalidades. Escríbeme directamente.</p>
     <div class="cta-actions">
-      <button class="btn" id="btnOpenModal">Contactar</button>
-      <a href="index.html" class="btn ghost">Abrir la aplicación</a>
+      <a href="mailto:mtgmanagementbuisness@gmail.com" style="font-family:'Cinzel',serif;font-size:.88rem;color:var(--gold);letter-spacing:.05em;text-decoration:none;border-bottom:1px solid rgba(231,188,110,.4);padding-bottom:2px;transition:.15s;" onmouseover="this.style.borderBottomColor='var(--gold)'" onmouseout="this.style.borderBottomColor='rgba(231,188,110,.4)'">mtgmanagementbuisness@gmail.com</a>
       <a href="https://ko-fi.com/mrsria" target="_blank" rel="noopener" class="btn ghost" style="display:inline-flex;align-items:center;gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Apóyame en Ko-fi</a>
     </div>
   </div>
@@ -916,18 +914,7 @@
   <div class="footer-sub">Desarrollado por María Raposo Sánchez · Herramienta local gratuita para coleccionistas de Magic: The Gathering</div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="contactModal">
-  <div class="modal">
-    <button class="modal-x" id="modalX">&#x2715;</button>
-    <h3>Contactar</h3>
-    <p>Si te interesa este proyecto, quieres colaborar o tienes ideas para nuevas funcionalidades, escríbeme directamente.</p>
-    <div class="modal-actions">
-      <a href="mailto:mtgmanagementbuisness@gmail.com" class="btn" id="mailBtn">Enviar email</a>
-      <button class="btn ghost" id="modalClose">Cerrar</button>
-    </div>
-  </div>
-</div>
+
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
@@ -946,14 +933,7 @@
   });
 
   // Modal
-  const modal = document.getElementById('contactModal');
-  const openM = () => modal.classList.add('open');
-  const closeM = () => modal.classList.remove('open');
-  document.getElementById('btnOpenModal').addEventListener('click', openM);
-  document.getElementById('navContact').addEventListener('click', e => { e.preventDefault(); openM(); });
-  document.getElementById('modalX').addEventListener('click', closeM);
-  document.getElementById('modalClose').addEventListener('click', closeM);
-  modal.addEventListener('click', e => { if(e.target === modal) closeM(); });
+
 
   // Chart.js — donut colores
   new Chart(document.getElementById('colorChart').getContext('2d'), {
